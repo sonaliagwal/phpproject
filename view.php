@@ -36,8 +36,9 @@ $lid=$_SESSION['lid'];
 		echo '<td>' . $row['room_type'] . '</td>';
 		echo '<td>' . $row['r_desc'] . '</td>';
 		echo '<td>' . $row['charge'] . '</td>';
-		echo '<td><a href="edit.php?room_type=' . $row['room_type'] . '">Edit</a></td>';
-		echo '<td><a href="delete.php?room_type=' . $row['room_type'] . '">Delete</a></td>';
+		echo '<td>' . $row['total_no'] . '</td>';
+		echo '<td><a href="edit.php?rid=' . $row['room_id'] . '">Edit</a></td>';
+		echo '<td><a href="delete.php?rid=' . $row['room_id'] . '">Delete</a></td>';
 		echo "</tr>"; 
 	} 
 

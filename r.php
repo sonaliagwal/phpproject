@@ -24,17 +24,36 @@ session_start();
     $checkout=$_POST['date1'];
    $ad=$_POST['ad'];
    $ch=$_POST['ch'];
-echo $checkin;
- echo $checkout;
- echo $ch;
- ?>
+
+  $result = mysql_query("SELECT * FROM room ") 
+    or die(mysql_error());
+
+ ?> 
  <form action="" method="post">
  <div>
+
 <select name=room >
 
-<option value='AC'>AC</option>
-<option value='NON'>non AC</option>
-<option value='deluxe'>DELUXE</option>
+<?php
+
+while($row = mysql_fetch_array( $result )) 
+{
+   $tot1=$row['total_no'];
+  $room1=$row['room_type'];
+  echo $room1;
+  $result1 = mysql_query("SELECT count('r_type') as a FROM book where r_type='$room1' ") ;
+
+    while($row = mysql_fetch_array( $result1 )) 
+    {
+    $tot=$row['a'];
+  
+  }
+    if($tot<$tot1 )
+    {
+echo '<option value='.$room1.'>'.$room1.'</option>';
+}
+}
+?>
 </select>
 <input type="text" readonly name="checkin" value="<?php echo $checkin ?>"></input>
  <input type="text" readonly name="checkout" value="<?php echo $checkout ?>"></input>

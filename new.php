@@ -9,7 +9,7 @@ $lid=$_SESSION['lid'];
  
  // creates the new record form
  // since this form is used multiple times in this file, I have made it a function that is easily reusable
- function renderForm($r_type,$desc, $charge, $error)
+ function renderForm($r_type,$desc, $charge,$total, $error)
  {
  ?>
  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
@@ -30,6 +30,7 @@ $lid=$_SESSION['lid'];
  <strong>room type: *</strong> <input type="text" name="r_type" value="<?php echo $r_type; ?>" /><br/>
  <strong>room description: *</strong> <input type="textarea" name="desc" value="<?php echo $desc; ?>" /><br/>
   <strong>charges: *</strong> <input type="text" name="charge" value="<?php echo $charge; ?>" /><br/>
+   <strong>total rooms: *</strong> <input type="text" name="total" value="<?php echo $total; ?>" /><br/>
  <p>* required</p>
  <input type="submit" name="submit" value="Submit">
  </div>
@@ -52,20 +53,20 @@ $lid=$_SESSION['lid'];
  $r_type = mysql_real_escape_string(htmlspecialchars($_POST['r_type']));
  $desc= mysql_real_escape_string(htmlspecialchars($_POST['desc']));
  $charge = mysql_real_escape_string(htmlspecialchars($_POST['charge']));
- 
+  $total = mysql_real_escape_string(htmlspecialchars($_POST['total']));
  // check to make sure both fields are entered
- if ($r_type== '' || $desc == '' || $charge == '')
+ if ($r_type== '' || $desc == '' || $charge == '' || $total=='')
  {
  // generate error message
  $error = 'ERROR: Please fill in all required fields!';
  
  // if either field is blank, display the form again
- renderForm($r_type,$desc, $charge, $error);
+ renderForm($r_type,$desc, $charge,$total, $error);
  }
  else
  {echo $lid;
  // save the data to the database
- mysql_query("INSERT room SET room_type='$r_type',r_desc='$desc',l_id='$lid',charge=$charge")
+ mysql_query("INSERT room SET room_type='$r_type',r_desc='$desc',l_id='$lid',charge=$charge,total_no=$total")
  or die(mysql_error()); 
  
  // once saved, redirect back to the view page
@@ -75,6 +76,6 @@ $lid=$_SESSION['lid'];
  else
  // if the form hasn't been submitted, display the form
  {
- renderForm('','','','');
+ renderForm('','','','','');
  }
 ?>

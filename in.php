@@ -36,13 +36,13 @@ while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
 	 { $_SESSION['type'] = "$type";
 	$_SESSION['lid'] = "$lid";
 	
-		header("Location: http://localhost/new/med.php");
+		header("Location: med.php");
 	}
 	
 	else
 	{$_SESSION['type'] = "$type";
 $_SESSION['lid'] = "$lid";
-header("Location: http://localhost/new/a.php");
+header("Location: a.php");
 	}
 }
 	else

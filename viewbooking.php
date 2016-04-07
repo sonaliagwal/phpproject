@@ -40,7 +40,7 @@ $status='confirm';
 		echo '<td>' . $row['childern'] . '</td>';
 		echo '<td>' . $row['price'] . '</td>';
 		echo '<td>' . $row['status'] . '</td>';
-		echo '<td><a href="status.php?bid=' . $row['b_id'] . '& event='. $status . '">confirm</a></td>';
+		echo '<td><a href="status.php?bid=' . $row['b_id'] . '&event='. $status . '">confirm</a></td>';
 		echo '<td><a href="status.php?bid=' . $row['b_id'] . '">Cancel</a></td>';
 		echo "</tr>"; 
 	} 
