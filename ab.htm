@@ -1,0 +1,82 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="p.css">
+<script src="p.js">
+</script>
+<script src="jquery-1.12.1.js"></script>
+</head>
+
+<body onload="disableSubmit()">
+
+<div id="d3">
+<form  method="post" action="home.php">
+<div id="d1">
+<h1 style="color:white;font-family:calibri;font-weight: 100 ;text-align:left ;padding:2px 0 5px 16px;margin: 13px 0 50px 3px ">Sign Up
+</h1>
+
+</div>
+<div id="d2">
+
+<span style="margin-left: 90px">
+<img src="img/fb.jpg" width="35px" height="35px" style="display: inline-block;margin-top: 5px;">
+</span>
+<span style="padding-bottom: 20px">
+<h4 style="color:white;font-family:Calibri;display: inline-block;position: absolute;padding: 10px 0 0 0;margin: 0;font-size: 18px">FACEBOOK</h4></span>
+
+</div>
+<table width=96% height=3% style="border-spacing: 10px;">
+	<tr >
+		<td  style="background-color: #4E5054;height: 45px;border-radius: 4px;">
+			<center><img src="img/git.png" width="30px" height="30px" ></center>
+		</td>
+		<td  style="background-color: #DE553C;border-radius: 4px">
+			<center><img src="img/g.png" width="30px" height="30px"  ></center>
+		</td>
+		<td style="background-color: #00BFFF;border-radius: 4px">
+			<center><img src="img/t1.png" width="30px" height="30px"  ></center>
+		</td>
+	</tr>
+</table>
+<div id="bor" style="display: inline-block;width:132px;margin-left: 22px" >
+</div>
+<div style="display: inline;">
+<img src="img/e_mail.png" width="8%" height="5%" >
+</div>
+<div id="bor" style="width:132px;display: inline-block;">
+</div>
+
+<div style="margin-left: 23PX;margin-top: 30px">
+<input id="bor" type="text" name="email" placeholder="Email" required max="100"  style="width:287px">
+</input>
+<input id="bor" type="text" name="name" placeholder="Full Name" max="100" required style="width:287px;margin-top: 30px">
+</input>
+<input id="bor" type="password" name="password" placeholder="Password"  max="100" required style="width:287px;margin-top: 30px">
+</input>
+<br><br><span style="font-family: calibri;font-size: 15px">
+Register As:-</span>
+<select name="cmbitems" id="cmbitems">
+    <option value="Admin">Admin</option>
+    <option value="Manager">Manager</option>
+    <option value="Customer">Customer</option>
+</select>
+</div>
+<p style="margin-left: 22px">By signing up you agree to our <span style="color: #00BFFF">Privacy Policy</span> and <span style="color: #00BFFF">EULA</span>
+</p>
+<div style="position: relative;margin-left: 18px">
+<input type="checkbox" name="checkbox" onchange="activateButton(this)">I have read all terms and condition.</input></div>
+
+
+<footer style="position: fixed;bottom: 0px;height: 40px"> 
+	<input class="pass" type="submit" id="submit" value="Sign Up"  style=" color:#00BFFF;margin-left: 250px;"  ></input> 
+</footer>
+</form>
+
+
+<footer style="position: fixed;bottom: 0px;height: 40px">
+	<a href="signin.htm"><input class="pass" type="submit"  value="Sign In"  style="margin-left: 20px;  color:gray" onclick ="signin.htm"></input> </a>
+	 
+</footer>
+
+</div>
+</body>
+</html>

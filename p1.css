@@ -1,0 +1,75 @@
+body
+{
+margin: .9px;
+}
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    margin-left: 180px;
+    float: left;
+    margin-top: 10px;
+}
+
+#d {
+    margin-top: 2px;
+     height: 35px;
+    
+    background: linear-gradient(to bottom ,#DDDDDD,#EEEEEE,#F9F9F9,#FCFCFC,#FFFFFF); 
+}
+#d1 {
+     height: 55px;
+     width: 100%;
+  
+    background: linear-gradient(to bottom ,#C95461,#BB4A45,#B03238); 
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+  
+
+#a1,#a2
+{
+    background-color: white;
+float: left;width: 55%;
+height: 30%;
+margin-left: 320px;
+display: none;
+    border-right: 0px white;
+    border-top: 0px white;
+    border-left: 0px white;
+    border-bottom: 5px solid #C95461;
+}
+p.dotted {
+     border-right: 0px white;
+    border-top: 0px white;
+    border-left: 0px white;
+    border-style: dashed;
+    border-width: 1px;
+}
+   .fadein { position:relative; width:500px; height:332px; }
+.fadein img { position:absolute; left:0; top:0; }
+.newspaper
+{
+    margin-top: 70%;
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+    -webkit-column-rule-style: solid; /* Chrome, Safari, Opera */
+    -moz-column-rule-style: solid; /* Firefox */
+    column-rule-style: solid;
+    -webkit-column-rule-width: 1px; /* Chrome, Safari, Opera */
+    -moz-column-rule-width: 1px; /* Firefox */
+    column-rule-width: 1px;
+    -webkit-column-rule-color: lightblue; /* Chrome, Safari, Opera */
+    -moz-column-rule-color: lightblue; /* Firefox */
+    column-rule-color: lightblue;
+    }
